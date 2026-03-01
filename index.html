@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отчет по лабораторной работе</title>
+
+</head>
+<body>
+<h1>Отчет по лабораторной работе<br>"Программно-аппаратные средства Web"</h1>
+
+<div class="task">
+    <h2>Задание 1: Получить главную страницу методом GET в протоколе HTTP 1.0</h2>
+    <div class="description">
+        <strong>Запрос:</strong><br>
+        GET / HTTP/1.0<br>
+        Host: u82277.kubsu-dev.ru
+    </div>
+    <div class="screenshot">
+        <img src="1.png" alt="Скриншот 1">
+    </div>
+</div>
+
+<div class="task">
+    <h2>Задание 2: Получить внутреннюю страницу методом GET в протоколе HTTP 1.1</h2>
+    <div class="description">
+        <strong>Запрос:</strong><br>
+        GET /index.php HTTP/1.1<br>
+        Host: u82277.kubsu-dev.ru<br>
+        Connection: close
+    </div>
+    <div class="screenshot">
+        <img src="2.png" alt="Скриншот 2">
+    </div>
+</div>
+
+<div class="task">
+    <h2>Задание 3: Определить размер файла file.tar.gz, не скачивая его</h2>
+    <div class="description">
+        <strong>Запрос:</strong><br>
+        HEAD /files/file.tar.gz HTTP/1.1<br>
+        Host: u82277.kubsu-dev.ru<br>
+        Connection: close<br><br>
+        <strong>Размер:</strong> 11335 байт
+    </div>
+    <div class="screenshot">
+        <img src="3.png" alt="Скриншот 3">
+    </div>
+</div>
+
+<div class="task">
+    <h2>Задание 4: Определить медиатип ресурса /image.png</h2>
+    <div class="description">
+        <strong>Запрос:</strong><br>
+        HEAD /files/image.png HTTP/1.1<br>
+        Host: u82277.kubsu-dev.ru<br>
+        Connection: close<br><br>
+        <strong>Медиатип:</strong> image/png
+    </div>
+    <div class="screenshot">
+        <img src="4.png" alt="Скриншот 4">
+    </div>
+</div>
+
+<div class="task">
+    <h2>Задание 5: Отправить комментарий на сервер по адресу /index.php (2 балла)</h2>
+    <div class="description">
+        <strong>Запрос:</strong><br>
+        POST /web_lab2/index.php HTTP/1.1<br>
+        Host: u82277.kubsu-dev.ru<br>
+        Content-Type: application/x-www-form-urlencoded<br>
+        Content-Length: 23<br>
+        comment=Hello!
+    </div>
+    <div class="screenshot">
+        <img src="5.png" alt="Скриншот 5">
+    </div>
+</div>
+
+<div class="task">
+    <h2>Задание 6: Получить первые 100 байт файла /file.tar.gz</h2>
+    <div class="description">
+        <strong>Запрос:</strong><br>
+        GET /files/file.tar.gz HTTP/1.1<br>
+        Host: u82277.kubsu-dev.ru<br>
+        Range: bytes=0-99<br>
+        Connection: close
+    </div>
+    <div class="screenshot">
+        <img src="6.png" alt="Скриншот 6">
+    </div>
+</div>
+
+<div class="task">
+    <h2>Задание 7: Определить кодировку ресурса /index.php</h2>
+    <div class="description">
+        <strong>Запрос:</strong><br>
+        HEAD /index.php HTTP/1.1<br>
+        Host: u82277.kubsu-dev.ru<br>
+        Connection: close<br><br>
+        <strong>Кодировка:</strong> UTF-8
+    </div>
+    <div class="screenshot">
+        <img src="7.png" alt="Скриншот 7">
+    </div>
+</div>
+</body>
+</html>
